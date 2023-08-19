@@ -1,9 +1,10 @@
-.pokemons {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing:  border-box;
+}
+
+body {
+    background-color: #0d1216;
 }
 
 .normal {
@@ -78,25 +79,55 @@
     background-color: #f9aec7;
 }
 
+.content {
+    width: 100vw;
+    height: 90%;
+    padding: 1rem;
+    background-color: #1e272e;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.content h1 {
+    margin: 0;
+}
+
+
+#title {
+    color: #fff;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.pokemons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    
+}
+
+
 .pokemon {
     display: flex;
     flex-direction: column;
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+
 }
 
 .pokemon .number {
-    color: #000;
-    opacity: .3;
+    color: black;
+    opacity: 0.3;
     text-align: right;
     font-size: .625rem;
 }
 
 .pokemon .name {
-    text-transform: capitalize;
     color: #fff;
     margin-bottom: .25rem;
+    text-transform: capitalize;
 }
 
 .pokemon .detail {
@@ -120,6 +151,7 @@
     border-radius: 1rem;
     filter: brightness(1.1);
     text-align: center;
+
 }
 
 .pokemon .detail img {
@@ -137,8 +169,8 @@
 }
 
 .pagination button {
-    padding: .25rem .5rem;
-    margin: .25rem 0;
+    padding: .25rem;
+    margin: .25rem;
     font-size: .625rem;
     color: #fff;
     background-color: #6c79db;
@@ -146,20 +178,12 @@
     border-radius: 1rem;
 }
 
-@media screen and (min-width: 380px) {
-    .pokemons {
-        grid-template-columns: 1fr 1fr;
-    }
+.search {
+    margin-right: 15px;
+    border-radius: 1rem;
 }
 
-@media screen and (min-width: 576px) {
-    .pokemons {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .pokemons {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+.header {
+    display: flex;
+    justify-content: space-between;
 }
